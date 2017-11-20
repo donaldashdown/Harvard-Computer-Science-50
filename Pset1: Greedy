@@ -1,3 +1,5 @@
+// This program, takes an input from the user, and determines the coins that should be provided as change. 
+
 #include <cs50.h>
 #include <stdio.h>
 
