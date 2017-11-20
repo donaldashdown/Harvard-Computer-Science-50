@@ -1,3 +1,5 @@
+//This program, builds a mario like pyramid based on user input.  
+
 #include <stdio.h>
 #include <cs50.h>
 
