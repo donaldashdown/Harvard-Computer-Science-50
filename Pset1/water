@@ -1,0 +1,16 @@
+//This program, takes your time in the shower, and outputs the equivilant in bottles of water used. 
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+
+{
+
+    printf("How long do you spend in the shower?\n");
+    int minutes = get_int();
+    printf("Minutes: %i\n", minutes);
+    int b = (minutes*12);
+    printf("Bottles: %i\n", b);
+
+}
