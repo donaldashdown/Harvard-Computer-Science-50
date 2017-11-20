@@ -1,3 +1,5 @@
+//This program, takes your time in the shower, and outputs the equivilant in bottles of water used. 
+
 #include <cs50.h>
 #include <stdio.h>
 
