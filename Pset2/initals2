@@ -1,0 +1,24 @@
+//This program will take your name as an arguement, and out put initials.
+#include <stdio.h>
+#include <string.h>
+#include <cs50.h>
+
+
+int main(int argc, string argv[])
+
+{
+    for (int i = 1; i < argc; i++)
+   {
+
+        if (argv[i][0] > 'a'){
+
+        printf("%c", argv[i][0]- 32);
+        }
+
+        else
+        printf("%c", argv[i][0]);
+   }
+printf("\n");
+}
+
+
