@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <cs50.h>
-#include <stdlib.h>
 #include <ctype.h>
 int main(int argc, string argv[])
 
@@ -42,14 +41,17 @@ int main(int argc, string argv[])
         for(int i = 0;  i < strlen(n); i++)
         {
 
-            if islower(n[i])
-            printf("%c", (((n[i] + k) -97) % 26) + 97);
-
-            else if isupper(n[i])
-            printf("%c," (((n[i] + k) - 65) % 26) + 65);
+            if (islower(n[i]))
+            {
+                printf("%c", (((n[i] + k) - 97) % 26) + 97);
+            }
+            else if (islower(n[i]))
+            {
+                printf("%c", (((n[i] + k) - 65) % 26) + 65);
+            }
         else
 
-        printf("%c", code[i]);
+        printf("%c", n[i]);
         }
 
 
