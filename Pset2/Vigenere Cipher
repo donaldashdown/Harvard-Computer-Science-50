@@ -1,1 +1,47 @@
 
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+#include <ctype.h>
+
+int main (int argc, string argv[])
+
+{
+
+
+printf("what is your messege?");
+string p = get_string();
+
+if (argc !=2) // || (argv[1]!=isalpha))
+    {
+        printf("Error, arguement count should be two, key should be letters only");
+    }
+
+    string k = argv[1];
+/*
+    int e = atoi(argv[1]);
+    int l = 0;
+*/
+
+    for (int i = 0; i < strlen(p); i++)
+    {
+        if (int m = 0; m < strlen(k))
+            {
+                int m = ((m++)%strlen(k))
+            }
+
+
+            if islower(p[i])
+                {
+                    printf("%c",(((p[i] + k[m])-97)%26)+97);
+                }
+
+            if isupper(p[i])
+                {
+                    printf("%c", (((p[i] + k[m]) - 65)%26)+65);
+                }
+    }
+
+
+return 0;
+}
