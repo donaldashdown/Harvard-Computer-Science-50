@@ -6,35 +6,28 @@ int main(int argc, string argv[])
 
 {
 
-
+    printf("What is your messege?\n");
+    string n = get_string();
 
     if (argc !=2)
     {
-        printf("error\n");
+        printf("Error,\n");
+        printf("You have entered one to many, or two few arguements.\n");
+        printf("Please run a maximum of two total arguements. Prgram name, and the key.\n");
         return 1;
     }
 
 
-    int k = atoi(argv[1]);
+    int k = atoi(argv[1]) % 26;
 
-    if ( k < 0)
+    if ( k == 0)
     {
-    printf("invalid\n");
-    return 1;
+        printf("invalid input\n");
+        printf("you have entered a non positive interger\n");
+        return 1;
     }
 
-
-
-    printf("What is your messege?\n");
-    string n = get_string();
-
-    printf("plantext is\n");
-    printf("%s\n", n);
-
-
-
-
-    printf("ciphertext\n");
+    printf("ciphertext: ");
 
 
 
@@ -45,13 +38,13 @@ int main(int argc, string argv[])
             {
                 printf("%c", (((n[i] + k) - 97) % 26) + 97);
             }
-            else if (islower(n[i]))
+            else if (isupper(n[i]))
             {
                 printf("%c", (((n[i] + k) - 65) % 26) + 65);
             }
-        else
+            else
 
-        printf("%c", n[i]);
+            printf("%c", n[i]);
         }
 
 
