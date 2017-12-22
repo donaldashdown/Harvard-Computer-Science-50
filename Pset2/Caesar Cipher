@@ -1,6 +1,8 @@
 //This is a Caesar Cipher
-//Messages are encrypted based on the user key
-//The key, must be a number, and entered as argv[1]
+/*
+    Messages are encrypted based on the user key
+    The key, must be a number, and entered as argv[1]
+*/
 
 #include <stdio.h>
 #include <string.h>
@@ -10,11 +12,14 @@
 int main(int argc, string argv[])
 
 {
-
+    //Request user user input
+    //Convert key from string to int
+    //Mod key value from ascii to face value
     printf("What is your messege?\n");
     string n = get_string();
     int k = atoi(argv[1]) % 26;
 
+    //Error handeling
     if (argc != 2)
     {
         printf("Error,\n");
@@ -22,6 +27,7 @@ int main(int argc, string argv[])
         return 0;
     }
 
+    //Error handeling
     if ( k == 0)
     {
         printf("invalid input\n");
@@ -29,11 +35,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    //Output of encrypted messege
     printf("ciphertext: ");
 
+    //Wrap around each character in the messege
     for(int i = 0;  i < strlen(n); i++)
     {
-
+        //Encryptes the text as lower or upper
         if (islower(n[i]))
         {
             printf("%c", (((n[i] + k) - 97) % 26) + 97);
@@ -44,6 +52,7 @@ int main(int argc, string argv[])
         }
         else
 
+        //Print the result
         printf("%c", n[i]);
     }
 
