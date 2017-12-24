@@ -15,16 +15,24 @@ int main (int argc, string argv[])
 
 //Check that input is valid
 {
+    string k = (argv[1]);
     if (argc !=2)
     {
         printf("Error, arguement count should be two\n");
         return 1;
     }
 
+    for (int c = 0; c < atoi(argv[1]); c++)
+        {
+            if(!isalpha(argv[1][c]))
+                printf("invalid, please enter letters only\n");
+                return 1;
+        }
+
 //Assign a place holder for the keyword as a string
 //Set the m'th character of keyword to 0
 
-    string k = (argv[1]);
+
     int m = 0;
 
 //Request and store messege
@@ -32,15 +40,22 @@ int main (int argc, string argv[])
     printf("what is your messege?\n");
     string p = get_string();
 
+
+
 //Prints encryped messege as cipher text
     printf("ciphertext:");
 
 //wraps around each character of the messege
     for(int i = 0; i < strlen(p); i++)
     {
+
+        if isblank(p[i])
+            printf(" ");
+
         if islower(p[i])
         {
             printf("%c",((p[i] - 'a') % 26) + argv[1][m]);
+            //printf("%c", (p[i]));
         }
 
         if isupper(p[i])
@@ -48,7 +63,7 @@ int main (int argc, string argv[])
             printf("%c",((p[i] - 'A') % 26) + argv[1][m]);
         }
 
-        if (m < strlen(k))
+        if ( m < strlen(k))
         {
             m++;
         }
