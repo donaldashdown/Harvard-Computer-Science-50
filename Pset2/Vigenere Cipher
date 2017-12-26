@@ -48,19 +48,24 @@ int main (int argc, string argv[])
 //wraps around each character of the messege
     for(int i = 0; i < strlen(p); i++)
     {
-
         if isblank(p[i])
             printf(" ");
+        if (p[i]) == false
+            printf("%c", p[i]);
 
         if islower(p[i])
         {
-            printf("%c",((p[i] - 'a') % 26) + argv[1][m]);
-            //printf("%c", (p[i]));
+            printf("%c",(((p[i] + k[m] - 194) % 26) + 97));
         }
 
         if isupper(p[i])
         {
-            printf("%c",((p[i] - 'A') % 26) + argv[1][m]);
+            p[i] = tolower(p[i]);
+            k[m] = tolower(k[m]);
+            /*printf("%c",*/p[i] = (((p[i] + k[m] - 194) % 26) + 97);
+            p[i] = toupper(p[i]);
+            printf("%c", p[i]);
+
         }
 
         if ( m < strlen(k))
