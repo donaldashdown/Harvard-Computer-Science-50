@@ -50,8 +50,6 @@ int main (int argc, string argv[])
     {
         if isblank(p[i])
             printf(" ");
-        if (p[i]) == false
-            printf("%c", p[i]);
 
         if islower(p[i])
         {
